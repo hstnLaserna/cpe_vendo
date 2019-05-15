@@ -32,6 +32,7 @@
             this.btn5 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
             this.grpVendoUI = new System.Windows.Forms.GroupBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnPayCredit = new System.Windows.Forms.Button();
             this.txtCoinsInserted = new System.Windows.Forms.TextBox();
             this.lblProductC3 = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.btnA1 = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.grpVendoUI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +104,7 @@
             // grpVendoUI
             // 
             this.grpVendoUI.BackColor = System.Drawing.SystemColors.Control;
+            this.grpVendoUI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grpVendoUI.Controls.Add(this.btnCancel);
             this.grpVendoUI.Controls.Add(this.btnPayCredit);
             this.grpVendoUI.Controls.Add(this.txtCoinsInserted);
@@ -143,6 +144,18 @@
             this.grpVendoUI.TabIndex = 14;
             this.grpVendoUI.TabStop = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Enabled = false;
+            this.btnCancel.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(99, 976);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(855, 75);
+            this.btnCancel.TabIndex = 41;
+            this.btnCancel.Text = "Cancel Transaction";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // btnPayCredit
             // 
             this.btnPayCredit.BackColor = System.Drawing.Color.White;
@@ -159,10 +172,11 @@
             // 
             // txtCoinsInserted
             // 
-            this.txtCoinsInserted.Enabled = false;
+            this.txtCoinsInserted.BackColor = System.Drawing.Color.White;
             this.txtCoinsInserted.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCoinsInserted.Location = new System.Drawing.Point(437, 274);
             this.txtCoinsInserted.Name = "txtCoinsInserted";
+            this.txtCoinsInserted.ReadOnly = true;
             this.txtCoinsInserted.Size = new System.Drawing.Size(198, 98);
             this.txtCoinsInserted.TabIndex = 39;
             this.txtCoinsInserted.Text = "x";
@@ -402,10 +416,11 @@
             // 
             // txtCurrentCredit
             // 
-            this.txtCurrentCredit.Enabled = false;
-            this.txtCurrentCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentCredit.BackColor = System.Drawing.Color.White;
+            this.txtCurrentCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCurrentCredit.Location = new System.Drawing.Point(160, 97);
             this.txtCurrentCredit.Name = "txtCurrentCredit";
+            this.txtCurrentCredit.ReadOnly = true;
             this.txtCurrentCredit.Size = new System.Drawing.Size(828, 34);
             this.txtCurrentCredit.TabIndex = 16;
             this.txtCurrentCredit.Text = "P x,xxx.xx";
@@ -480,6 +495,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.White;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(2, 47);
             this.txtName.Name = "txtName";
@@ -487,47 +503,37 @@
             this.txtName.TabIndex = 4;
             this.txtName.Text = "[Employee Name]";
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(3, 17);
+            this.lblName.Location = new System.Drawing.Point(3, 22);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(117, 22);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Hi! You are";
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Enabled = false;
-            this.btnCancel.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(99, 976);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(855, 75);
-            this.btnCancel.TabIndex = 41;
-            this.btnCancel.Text = "Cancel Transaction";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
             // VendoInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1366, 1102);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1366, 1055);
             this.Controls.Add(this.grpVendoUI);
             this.Controls.Add(this.btn10);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn1);
             this.Cursor = System.Windows.Forms.Cursors.No;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(530, 730);
             this.Name = "VendoInterface";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendo_Kiosk";
+            this.Text = this.Name;
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Lime;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
