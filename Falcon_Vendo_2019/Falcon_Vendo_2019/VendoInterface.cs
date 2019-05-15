@@ -59,7 +59,7 @@ namespace Falcon_Vendo_2019
         private void txtName_TextChanged(object sender, EventArgs e)
         {
             initializeForm();
-            if(txtName.Text =="")
+            if (txtName.Text == "")
             {
                 btnCash.Enabled = false;
                 btnCredit.Enabled = false;
@@ -82,7 +82,7 @@ namespace Falcon_Vendo_2019
                 btnCredit.Visible = false;
                 btnCash.BackColor = System.Drawing.Color.LightCoral;
             }
-            else {}
+            else { }
         }
         private void btnCredit_Click(object sender, EventArgs e)
         {
@@ -101,7 +101,7 @@ namespace Falcon_Vendo_2019
                 btnPayCredit.Visible = true;
                 MessageBox.Show("You almost reached your credit limit! \n Current Balance: " + loadedCredit + "\n Credit Limit: " + creditLimit + "\n Available for Purchase: " + (creditLimit - loadedCredit), "Insufficient Credit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else {}
+            else { }
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace Falcon_Vendo_2019
             coinsInserted = 0;
             txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
             txtCoinsInserted.Text = Convert.ToString(coinsInserted);
-            if(maxedCredit() == false)
+            if (maxedCredit() == false)
             {
                 activateButtons(true);
             }
@@ -245,8 +245,8 @@ namespace Falcon_Vendo_2019
             btnB1.Text = "B1 \n" + b1price + ".00"; btnB2.Text = "B2 \n" + b2price + ".00"; btnB3.Text = "B3 \n" + b3price + ".00";
             btnC1.Text = "C1 \n" + c1price + ".00"; btnC2.Text = "C2 \n" + c2price + ".00"; btnC3.Text = "C3 \n" + c3price + ".00";
             btnD1.Text = "D1 \n" + d1price + ".00"; btnD2.Text = "D2 \n" + d2price + ".00"; btnD3.Text = "D3 \n" + d3price + ".00";
-            lblProductA1.Text = a1item; lblProductA2.Text = a2item; lblProductA3.Text = a3item; 
-            lblProductB1.Text = b1item; lblProductB2.Text = b2item; lblProductB3.Text = b3item; 
+            lblProductA1.Text = a1item; lblProductA2.Text = a2item; lblProductA3.Text = a3item;
+            lblProductB1.Text = b1item; lblProductB2.Text = b2item; lblProductB3.Text = b3item;
             lblProductC1.Text = c1item; lblProductC2.Text = c2item; lblProductC3.Text = c3item;
             lblProductD1.Text = d1item; lblProductD2.Text = d2item; lblProductD3.Text = d3item;
             formResize();
@@ -304,7 +304,7 @@ namespace Falcon_Vendo_2019
 
         private void formResize()
         {
-            grpVendoUI.Size = new System.Drawing.Size(ClientSize.Width*4/5, 850);
+            grpVendoUI.Size = new System.Drawing.Size(ClientSize.Width * 4 / 5, 850);
             grpVendoUI.Location = new System.Drawing.Point(ClientSize.Width / 2 - ((grpVendoUI.Size.Width) / 2), ClientSize.Height / 2 - ((grpVendoUI.Size.Height) / 2));
             txtName.Size = new System.Drawing.Size(grpVendoUI.Size.Width - 4, 45);
             txtCurrentCredit.Size = new System.Drawing.Size(txtName.Size.Width - lblCreditAmount.Size.Width, 45);
@@ -314,7 +314,7 @@ namespace Falcon_Vendo_2019
             txtCoinsInserted.Location = new System.Drawing.Point((grpVendoUI.Size.Width / 2) - (txtCoinsInserted.Size.Width / 2), btnPayCredit.Location.Y + (btnPayCredit.Size.Height / 2 - txtCoinsInserted.Size.Height / 2));
             btnPayCredit.Location = new System.Drawing.Point(btnCredit.Location.X + btnCredit.Size.Width - btnPayCredit.Size.Width, btnCredit.Location.Y + btnCredit.Size.Height + 15);
             btnCancel.Location = new System.Drawing.Point(grpVendoUI.Size.Width / 2 - ((btnCancel.Size.Width) / 2), lblProductD1.Location.Y + lblProductD1.Size.Height + 15);
-            
+
             btnA1.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 1 / 4) - (btnA1.Size.Width / 2), btnPayCredit.Location.Y + btnPayCredit.Size.Height + 20);
             btnA2.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 2 / 4) - (btnA2.Size.Width / 2), btnA1.Location.Y);
             btnA3.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 3 / 4) - (btnA3.Size.Width / 2), btnA1.Location.Y);
@@ -341,6 +341,5 @@ namespace Falcon_Vendo_2019
             lblProductD2.Location = new System.Drawing.Point((btnD2.Location.X + (btnD2.Size.Width) / 2) - lblProductD2.Size.Width / 2, lblProductD1.Location.Y);
             lblProductD3.Location = new System.Drawing.Point((btnD3.Location.X + (btnD3.Size.Width) / 2) - lblProductD3.Size.Width / 2, lblProductD1.Location.Y);
         }
-
     }
 }
