@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Falcon_Vendo_2019
 {
@@ -14,7 +15,10 @@ namespace Falcon_Vendo_2019
     {
         //string connectionString = @"Server=localhost;Database=falcon_vendo;Uid=root;Pwd=root";
 
-        string loadedEmployee /*test*/ = "test";
+        SqlConnection conn = new SqlConnection(@"server=localhost;user id=root;persistsecurityinfo=True;database=falcon_vendo");
+
+        string loadedEmployee /*test*/ = "3601624226";
+        string loadedEmployeeName /*test*/ = "LASERA, JI";
         int loadedCredit /*test*/ = -864;
         int creditLimit /*test*/ = -1000;
         int highestPrice /*test*/ = 100;
@@ -39,6 +43,7 @@ namespace Falcon_Vendo_2019
             this.WindowState = FormWindowState.Maximized;
             initializeForm();
             txtName.Text = "";
+            txtName.Select();
             btnCash.Enabled = false;
             btnCredit.Enabled = false;
             txtCoinsInserted.Text = Convert.ToString(coinsInserted);
@@ -53,7 +58,6 @@ namespace Falcon_Vendo_2019
 
         private void txtName_MouseClick(object sender, MouseEventArgs e)
         {
-            txtName.SelectAll();
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -75,19 +79,16 @@ namespace Falcon_Vendo_2019
 
         private void btnCash_Click(object sender, EventArgs e)
         {
-            if (checkBuyer() == true)
-            {
-                transactionMode = "cash";
-                btnCash.Enabled = false;
-                btnCredit.Visible = false;
-                btnCash.BackColor = System.Drawing.Color.LightCoral;
-            }
-            else { }
+            transactionMode = "cash";
+            btnCash.Enabled = false;
+            btnCredit.Visible = false;
+            btnCash.BackColor = System.Drawing.Color.LightCoral;
+            txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
         }
         private void btnCredit_Click(object sender, EventArgs e)
         {
 
-            if (checkBuyer() == true && maxedCredit() == false)
+            if (maxedCredit() == false)
             {
                 transactionMode = "credit";
                 activateButtons(true);
@@ -102,6 +103,7 @@ namespace Falcon_Vendo_2019
                 MessageBox.Show("You almost reached your credit limit! \n Current Balance: " + loadedCredit + "\n Credit Limit: " + creditLimit + "\n Available for Purchase: " + (creditLimit - loadedCredit), "Insufficient Credit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else { }
+            txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -194,8 +196,10 @@ namespace Falcon_Vendo_2019
             if (coinsInserted == 0)
             {
                 initializeForm();
-                txtName.Text = "";
                 txtCurrentCredit.Text = "";
+                txtName.Text = "";
+                txtName.ReadOnly = false;
+                txtName.Select();
             }
             else if (cancelAttempts <= 2)
             {
@@ -203,6 +207,43 @@ namespace Falcon_Vendo_2019
                 MessageBox.Show("You still have Coins Inserted! \n Attemps: " + cancelAttempts, "Vendo", MessageBoxButtons.YesNoCancel);
 
             }
+        }
+
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                if (checkBuyer())
+                {
+                    txtName.Text = loadedEmployeeName;
+                    txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
+                    txtName.ReadOnly = true;
+                    txt1.Text = "ORAYT";
+                }
+                else
+                {
+                    txtName.Text = "";
+                    txt1.Text = "engk";
+                }
+                e.Handled = true;
+            }
+        }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+            txtName.SelectAll();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            initializeForm();
+            txtName.ReadOnly = false;
+            txtName.Text = "";
+            txtName.Select();
+            btnCash.Enabled = false;
+            btnCredit.Enabled = false;
+            btnCancel.Enabled = false;
         }
 
         //
@@ -255,8 +296,11 @@ namespace Falcon_Vendo_2019
 
         private bool checkBuyer()
         {
-            if (txtName.Text == loadedEmployee)  // Hardcoded check for buyer. must be done in database 
+            //txtName.Text = 
+            if (txtName.Text == loadedEmployee) // Hardcoded check for buyer. must be done in database 
             {
+                //loadedEmployeeName ="";
+                //loadedCredit = "";
                 txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
                 return true;
             }
@@ -306,15 +350,18 @@ namespace Falcon_Vendo_2019
         {
             grpVendoUI.Size = new System.Drawing.Size(ClientSize.Width * 4 / 5, 850);
             grpVendoUI.Location = new System.Drawing.Point(ClientSize.Width / 2 - ((grpVendoUI.Size.Width) / 2), ClientSize.Height / 2 - ((grpVendoUI.Size.Height) / 2));
-            txtName.Size = new System.Drawing.Size(grpVendoUI.Size.Width - 4, 45);
-            txtCurrentCredit.Size = new System.Drawing.Size(txtName.Size.Width - lblCreditAmount.Size.Width, 45);
+            txtName.Size = new System.Drawing.Size(grpVendoUI.Size.Width - btnNew.Size.Width - 4, 45);
+            txtCurrentCredit.Size = new System.Drawing.Size(grpVendoUI.Size.Width - lblCreditAmount.Size.Width, 45);
             txtCurrentCredit.Location = new System.Drawing.Point(lblCreditAmount.Size.Width + 2, txtName.Location.Y + txtName.Size.Height + 5);
             btnCash.Location = new System.Drawing.Point((grpVendoUI.Size.Width / 3) - (btnCash.Size.Width / 2) - (50), txtCurrentCredit.Location.Y + txtCurrentCredit.Size.Height + 15);
             btnCredit.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 2 / 3) - (btnCredit.Size.Width / 2) + (50), btnCash.Location.Y);
             txtCoinsInserted.Location = new System.Drawing.Point((grpVendoUI.Size.Width / 2) - (txtCoinsInserted.Size.Width / 2), btnPayCredit.Location.Y + (btnPayCredit.Size.Height / 2 - txtCoinsInserted.Size.Height / 2));
             btnPayCredit.Location = new System.Drawing.Point(btnCredit.Location.X + btnCredit.Size.Width - btnPayCredit.Size.Width, btnCredit.Location.Y + btnCredit.Size.Height + 15);
             btnCancel.Location = new System.Drawing.Point(grpVendoUI.Size.Width / 2 - ((btnCancel.Size.Width) / 2), lblProductD1.Location.Y + lblProductD1.Size.Height + 15);
+            btnNew.Location = new System.Drawing.Point((txtName.Location.X + txtName.Size.Width), txtName.Location.Y);
 
+            btnB1.Location = new System.Drawing.Point(btnA1.Location.X, btnA1.Location.Y + btnA1.Size.Height + 30);
+            btnB2.Location = new System.Drawing.Point(btnA2.Location.X, btnB1.Location.Y);
             btnA1.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 1 / 4) - (btnA1.Size.Width / 2), btnPayCredit.Location.Y + btnPayCredit.Size.Height + 20);
             btnA2.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 2 / 4) - (btnA2.Size.Width / 2), btnA1.Location.Y);
             btnA3.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 3 / 4) - (btnA3.Size.Width / 2), btnA1.Location.Y);

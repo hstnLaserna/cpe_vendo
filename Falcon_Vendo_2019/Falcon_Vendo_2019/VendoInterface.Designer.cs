@@ -32,6 +32,7 @@
             this.btn5 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
             this.grpVendoUI = new System.Windows.Forms.GroupBox();
+            this.txt1 = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnPayCredit = new System.Windows.Forms.Button();
             this.txtCoinsInserted = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.btnC1 = new System.Windows.Forms.Button();
             this.btnD1 = new System.Windows.Forms.Button();
             this.btnB1 = new System.Windows.Forms.Button();
-            this.txtCurrentCredit = new System.Windows.Forms.TextBox();
             this.lblCreditAmount = new System.Windows.Forms.Label();
             this.btnA3 = new System.Windows.Forms.Button();
             this.btnA2 = new System.Windows.Forms.Button();
@@ -65,6 +65,8 @@
             this.btnA1 = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.txtCurrentCredit = new System.Windows.Forms.Label();
+            this.btnNew = new System.Windows.Forms.Button();
             this.grpVendoUI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             this.btn1.Location = new System.Drawing.Point(27, 597);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(78, 60);
-            this.btn1.TabIndex = 11;
+            this.btn1.TabIndex = 4;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
@@ -85,7 +87,7 @@
             this.btn5.Location = new System.Drawing.Point(27, 663);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(78, 60);
-            this.btn5.TabIndex = 12;
+            this.btn5.TabIndex = 5;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
@@ -96,7 +98,7 @@
             this.btn10.Location = new System.Drawing.Point(27, 729);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(78, 60);
-            this.btn10.TabIndex = 13;
+            this.btn10.TabIndex = 6;
             this.btn10.Text = "10";
             this.btn10.UseVisualStyleBackColor = true;
             this.btn10.Click += new System.EventHandler(this.btn10_Click);
@@ -105,6 +107,9 @@
             // 
             this.grpVendoUI.BackColor = System.Drawing.SystemColors.Control;
             this.grpVendoUI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grpVendoUI.Controls.Add(this.btnNew);
+            this.grpVendoUI.Controls.Add(this.txtCurrentCredit);
+            this.grpVendoUI.Controls.Add(this.txt1);
             this.grpVendoUI.Controls.Add(this.btnCancel);
             this.grpVendoUI.Controls.Add(this.btnPayCredit);
             this.grpVendoUI.Controls.Add(this.txtCoinsInserted);
@@ -129,7 +134,6 @@
             this.grpVendoUI.Controls.Add(this.btnC1);
             this.grpVendoUI.Controls.Add(this.btnD1);
             this.grpVendoUI.Controls.Add(this.btnB1);
-            this.grpVendoUI.Controls.Add(this.txtCurrentCredit);
             this.grpVendoUI.Controls.Add(this.lblCreditAmount);
             this.grpVendoUI.Controls.Add(this.btnA3);
             this.grpVendoUI.Controls.Add(this.btnA2);
@@ -144,6 +148,19 @@
             this.grpVendoUI.TabIndex = 14;
             this.grpVendoUI.TabStop = false;
             // 
+            // txt1
+            // 
+            this.txt1.BackColor = System.Drawing.Color.Black;
+            this.txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txt1.Location = new System.Drawing.Point(119, 273);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(288, 38);
+            this.txt1.TabIndex = 42;
+            this.txt1.Text = "[Employee Name]";
+            this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
@@ -151,7 +168,7 @@
             this.btnCancel.Location = new System.Drawing.Point(99, 976);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(855, 75);
-            this.btnCancel.TabIndex = 41;
+            this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Cancel Transaction";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -164,7 +181,7 @@
             this.btnPayCredit.Location = new System.Drawing.Point(674, 273);
             this.btnPayCredit.Name = "btnPayCredit";
             this.btnPayCredit.Size = new System.Drawing.Size(280, 100);
-            this.btnPayCredit.TabIndex = 40;
+            this.btnPayCredit.TabIndex = 20;
             this.btnPayCredit.Text = "Deduct to your Credit";
             this.btnPayCredit.UseVisualStyleBackColor = false;
             this.btnPayCredit.Visible = false;
@@ -321,7 +338,7 @@
             this.btnC3.Location = new System.Drawing.Point(718, 676);
             this.btnC3.Name = "btnC3";
             this.btnC3.Size = new System.Drawing.Size(175, 100);
-            this.btnC3.TabIndex = 26;
+            this.btnC3.TabIndex = 15;
             this.btnC3.Text = "C3";
             this.btnC3.UseVisualStyleBackColor = true;
             this.btnC3.Click += new System.EventHandler(this.productClick);
@@ -332,7 +349,7 @@
             this.btnD3.Location = new System.Drawing.Point(718, 825);
             this.btnD3.Name = "btnD3";
             this.btnD3.Size = new System.Drawing.Size(175, 100);
-            this.btnD3.TabIndex = 25;
+            this.btnD3.TabIndex = 18;
             this.btnD3.Text = "D3";
             this.btnD3.UseVisualStyleBackColor = true;
             this.btnD3.Click += new System.EventHandler(this.productClick);
@@ -343,7 +360,7 @@
             this.btnB3.Location = new System.Drawing.Point(718, 540);
             this.btnB3.Name = "btnB3";
             this.btnB3.Size = new System.Drawing.Size(175, 100);
-            this.btnB3.TabIndex = 24;
+            this.btnB3.TabIndex = 12;
             this.btnB3.Text = "B3";
             this.btnB3.UseVisualStyleBackColor = true;
             this.btnB3.Click += new System.EventHandler(this.productClick);
@@ -354,7 +371,7 @@
             this.btnC2.Location = new System.Drawing.Point(481, 676);
             this.btnC2.Name = "btnC2";
             this.btnC2.Size = new System.Drawing.Size(175, 100);
-            this.btnC2.TabIndex = 23;
+            this.btnC2.TabIndex = 14;
             this.btnC2.Text = "C2";
             this.btnC2.UseVisualStyleBackColor = true;
             this.btnC2.Click += new System.EventHandler(this.productClick);
@@ -365,7 +382,7 @@
             this.btnD2.Location = new System.Drawing.Point(481, 825);
             this.btnD2.Name = "btnD2";
             this.btnD2.Size = new System.Drawing.Size(175, 100);
-            this.btnD2.TabIndex = 22;
+            this.btnD2.TabIndex = 17;
             this.btnD2.Text = "D2";
             this.btnD2.UseVisualStyleBackColor = true;
             this.btnD2.Click += new System.EventHandler(this.productClick);
@@ -376,7 +393,7 @@
             this.btnB2.Location = new System.Drawing.Point(481, 540);
             this.btnB2.Name = "btnB2";
             this.btnB2.Size = new System.Drawing.Size(175, 100);
-            this.btnB2.TabIndex = 21;
+            this.btnB2.TabIndex = 11;
             this.btnB2.Text = "B2";
             this.btnB2.UseVisualStyleBackColor = true;
             this.btnB2.Click += new System.EventHandler(this.productClick);
@@ -387,7 +404,7 @@
             this.btnC1.Location = new System.Drawing.Point(225, 676);
             this.btnC1.Name = "btnC1";
             this.btnC1.Size = new System.Drawing.Size(175, 100);
-            this.btnC1.TabIndex = 20;
+            this.btnC1.TabIndex = 13;
             this.btnC1.Text = "C1";
             this.btnC1.UseVisualStyleBackColor = true;
             this.btnC1.Click += new System.EventHandler(this.productClick);
@@ -398,7 +415,7 @@
             this.btnD1.Location = new System.Drawing.Point(225, 825);
             this.btnD1.Name = "btnD1";
             this.btnD1.Size = new System.Drawing.Size(175, 100);
-            this.btnD1.TabIndex = 19;
+            this.btnD1.TabIndex = 16;
             this.btnD1.Text = "D1";
             this.btnD1.UseVisualStyleBackColor = true;
             this.btnD1.Click += new System.EventHandler(this.productClick);
@@ -409,22 +426,10 @@
             this.btnB1.Location = new System.Drawing.Point(225, 540);
             this.btnB1.Name = "btnB1";
             this.btnB1.Size = new System.Drawing.Size(175, 100);
-            this.btnB1.TabIndex = 18;
+            this.btnB1.TabIndex = 10;
             this.btnB1.Text = "B1";
             this.btnB1.UseVisualStyleBackColor = true;
             this.btnB1.Click += new System.EventHandler(this.productClick);
-            // 
-            // txtCurrentCredit
-            // 
-            this.txtCurrentCredit.BackColor = System.Drawing.Color.White;
-            this.txtCurrentCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentCredit.Location = new System.Drawing.Point(160, 97);
-            this.txtCurrentCredit.Name = "txtCurrentCredit";
-            this.txtCurrentCredit.ReadOnly = true;
-            this.txtCurrentCredit.Size = new System.Drawing.Size(828, 34);
-            this.txtCurrentCredit.TabIndex = 16;
-            this.txtCurrentCredit.Text = "P x,xxx.xx";
-            this.txtCurrentCredit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblCreditAmount
             // 
@@ -442,7 +447,7 @@
             this.btnA3.Location = new System.Drawing.Point(718, 396);
             this.btnA3.Name = "btnA3";
             this.btnA3.Size = new System.Drawing.Size(175, 100);
-            this.btnA3.TabIndex = 15;
+            this.btnA3.TabIndex = 9;
             this.btnA3.Text = "A3";
             this.btnA3.UseVisualStyleBackColor = true;
             this.btnA3.Click += new System.EventHandler(this.productClick);
@@ -453,7 +458,7 @@
             this.btnA2.Location = new System.Drawing.Point(481, 396);
             this.btnA2.Name = "btnA2";
             this.btnA2.Size = new System.Drawing.Size(175, 100);
-            this.btnA2.TabIndex = 14;
+            this.btnA2.TabIndex = 8;
             this.btnA2.Text = "A2";
             this.btnA2.UseVisualStyleBackColor = true;
             this.btnA2.Click += new System.EventHandler(this.productClick);
@@ -465,7 +470,7 @@
             this.btnCredit.Location = new System.Drawing.Point(554, 151);
             this.btnCredit.Name = "btnCredit";
             this.btnCredit.Size = new System.Drawing.Size(400, 100);
-            this.btnCredit.TabIndex = 13;
+            this.btnCredit.TabIndex = 3;
             this.btnCredit.Text = "CREDIT";
             this.btnCredit.UseVisualStyleBackColor = false;
             this.btnCredit.Click += new System.EventHandler(this.btnCredit_Click);
@@ -477,7 +482,7 @@
             this.btnCash.Location = new System.Drawing.Point(99, 151);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(400, 100);
-            this.btnCash.TabIndex = 11;
+            this.btnCash.TabIndex = 2;
             this.btnCash.Text = "CASH";
             this.btnCash.UseVisualStyleBackColor = false;
             this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
@@ -488,7 +493,7 @@
             this.btnA1.Location = new System.Drawing.Point(225, 396);
             this.btnA1.Name = "btnA1";
             this.btnA1.Size = new System.Drawing.Size(175, 100);
-            this.btnA1.TabIndex = 12;
+            this.btnA1.TabIndex = 7;
             this.btnA1.Text = "A1";
             this.btnA1.UseVisualStyleBackColor = true;
             this.btnA1.Click += new System.EventHandler(this.productClick);
@@ -499,12 +504,14 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(2, 47);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(986, 45);
-            this.txtName.TabIndex = 4;
+            this.txtName.Size = new System.Drawing.Size(952, 45);
+            this.txtName.TabIndex = 1;
             this.txtName.Text = "[Employee Name]";
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
+            this.txtName.Click += new System.EventHandler(this.txtName_Enter);
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // lblName
             // 
@@ -515,6 +522,30 @@
             this.lblName.Size = new System.Drawing.Size(117, 22);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Hi! You are";
+            // 
+            // txtCurrentCredit
+            // 
+            this.txtCurrentCredit.BackColor = System.Drawing.Color.White;
+            this.txtCurrentCredit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtCurrentCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtCurrentCredit.Location = new System.Drawing.Point(160, 97);
+            this.txtCurrentCredit.Name = "txtCurrentCredit";
+            this.txtCurrentCredit.Size = new System.Drawing.Size(828, 34);
+            this.txtCurrentCredit.TabIndex = 0;
+            this.txtCurrentCredit.Text = "Credit amount";
+            this.txtCurrentCredit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.White;
+            this.btnNew.Font = new System.Drawing.Font("University", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(949, 47);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(45, 45);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "+";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // VendoInterface
             // 
@@ -573,7 +604,6 @@
         private System.Windows.Forms.Button btnC1;
         private System.Windows.Forms.Button btnD1;
         private System.Windows.Forms.Button btnB1;
-        private System.Windows.Forms.TextBox txtCurrentCredit;
         private System.Windows.Forms.Label lblCreditAmount;
         private System.Windows.Forms.Button btnA3;
         private System.Windows.Forms.Button btnA2;
@@ -584,6 +614,9 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnPayCredit;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txt1;
+        private System.Windows.Forms.Label txtCurrentCredit;
+        private System.Windows.Forms.Button btnNew;
     }
 }
 
