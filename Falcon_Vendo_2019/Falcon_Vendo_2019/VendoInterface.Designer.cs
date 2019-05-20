@@ -32,7 +32,8 @@
             this.btn5 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
             this.grpVendoUI = new System.Windows.Forms.GroupBox();
-            this.txt1 = new System.Windows.Forms.TextBox();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.txtCurrentCredit = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnPayCredit = new System.Windows.Forms.Button();
             this.txtCoinsInserted = new System.Windows.Forms.TextBox();
@@ -65,8 +66,6 @@
             this.btnA1 = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtCurrentCredit = new System.Windows.Forms.Label();
-            this.btnNew = new System.Windows.Forms.Button();
             this.grpVendoUI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +108,6 @@
             this.grpVendoUI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grpVendoUI.Controls.Add(this.btnNew);
             this.grpVendoUI.Controls.Add(this.txtCurrentCredit);
-            this.grpVendoUI.Controls.Add(this.txt1);
             this.grpVendoUI.Controls.Add(this.btnCancel);
             this.grpVendoUI.Controls.Add(this.btnPayCredit);
             this.grpVendoUI.Controls.Add(this.txtCoinsInserted);
@@ -148,18 +146,29 @@
             this.grpVendoUI.TabIndex = 14;
             this.grpVendoUI.TabStop = false;
             // 
-            // txt1
+            // btnNew
             // 
-            this.txt1.BackColor = System.Drawing.Color.Black;
-            this.txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txt1.Location = new System.Drawing.Point(119, 273);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(288, 38);
-            this.txt1.TabIndex = 42;
-            this.txt1.Text = "[Employee Name]";
-            this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNew.BackColor = System.Drawing.Color.White;
+            this.btnNew.Font = new System.Drawing.Font("University", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(949, 47);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(45, 45);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "+";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // txtCurrentCredit
+            // 
+            this.txtCurrentCredit.BackColor = System.Drawing.Color.White;
+            this.txtCurrentCredit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtCurrentCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtCurrentCredit.Location = new System.Drawing.Point(160, 97);
+            this.txtCurrentCredit.Name = "txtCurrentCredit";
+            this.txtCurrentCredit.Size = new System.Drawing.Size(828, 34);
+            this.txtCurrentCredit.TabIndex = 0;
+            this.txtCurrentCredit.Text = "Credit amount";
+            this.txtCurrentCredit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCancel
             // 
@@ -473,6 +482,7 @@
             this.btnCredit.TabIndex = 3;
             this.btnCredit.Text = "CREDIT";
             this.btnCredit.UseVisualStyleBackColor = false;
+            this.btnCredit.EnabledChanged += new System.EventHandler(this.btnCredit_EnabledChanged);
             this.btnCredit.Click += new System.EventHandler(this.btnCredit_Click);
             // 
             // btnCash
@@ -485,6 +495,7 @@
             this.btnCash.TabIndex = 2;
             this.btnCash.Text = "CASH";
             this.btnCash.UseVisualStyleBackColor = false;
+            this.btnCash.EnabledChanged += new System.EventHandler(this.btnCash_EnabledChanged);
             this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // btnA1
@@ -523,42 +534,19 @@
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Hi! You are";
             // 
-            // txtCurrentCredit
-            // 
-            this.txtCurrentCredit.BackColor = System.Drawing.Color.White;
-            this.txtCurrentCredit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtCurrentCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txtCurrentCredit.Location = new System.Drawing.Point(160, 97);
-            this.txtCurrentCredit.Name = "txtCurrentCredit";
-            this.txtCurrentCredit.Size = new System.Drawing.Size(828, 34);
-            this.txtCurrentCredit.TabIndex = 0;
-            this.txtCurrentCredit.Text = "Credit amount";
-            this.txtCurrentCredit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.White;
-            this.btnNew.Font = new System.Drawing.Font("University", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(949, 47);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(45, 45);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "+";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
             // VendoInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1366, 1055);
+            this.ClientSize = new System.Drawing.Size(1084, 1055);
             this.Controls.Add(this.grpVendoUI);
             this.Controls.Add(this.btn10);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn1);
             this.Cursor = System.Windows.Forms.Cursors.No;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(530, 730);
             this.Name = "VendoInterface";
@@ -614,7 +602,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnPayCredit;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txt1;
         private System.Windows.Forms.Label txtCurrentCredit;
         private System.Windows.Forms.Button btnNew;
     }

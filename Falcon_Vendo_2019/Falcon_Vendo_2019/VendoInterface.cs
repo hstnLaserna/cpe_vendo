@@ -17,12 +17,12 @@ namespace Falcon_Vendo_2019
 
         SqlConnection conn = new SqlConnection(@"server=localhost;user id=root;persistsecurityinfo=True;database=falcon_vendo");
 
-        string loadedEmployee /*test*/ = "3601624226";
+        string loadedEmployee /*test*/ = "2623347780";
         string loadedEmployeeName /*test*/ = "LASERA, JI";
         int loadedCredit /*test*/ = -864;
         int creditLimit /*test*/ = -1000;
         int highestPrice /*test*/ = 100;
-        string transactionMode = "";    // "cash" or "credit"
+        string transactionMode;    // "cash" or "credit"
         int cancelAttempts, coinsInserted = 0;
 
         string a1item, a2item, a3item, b1item, b2item, b3item, c1item, c2item, c3item, d1item, d2item, d3item;
@@ -44,8 +44,6 @@ namespace Falcon_Vendo_2019
             initializeForm();
             txtName.Text = "";
             txtName.Select();
-            btnCash.Enabled = false;
-            btnCredit.Enabled = false;
             txtCoinsInserted.Text = Convert.ToString(coinsInserted);
             txtCoinsInserted.BackColor = System.Drawing.Color.White;
             txtCoinsInserted.ForeColor = System.Drawing.Color.Red;
@@ -63,11 +61,11 @@ namespace Falcon_Vendo_2019
         private void txtName_TextChanged(object sender, EventArgs e)
         {
             initializeForm();
-            if (txtName.Text == "")
+            if (checkBuyer() == true)
             {
-                btnCash.Enabled = false;
-                btnCredit.Enabled = false;
-                btnCancel.Enabled = false;
+                btnCash.Enabled = true;
+                btnCredit.Enabled = true;
+                btnCancel.Enabled = true;
             }
             txtCoinsInserted.Text = Convert.ToString(coinsInserted);
         }
@@ -79,25 +77,28 @@ namespace Falcon_Vendo_2019
 
         private void btnCash_Click(object sender, EventArgs e)
         {
-            transactionMode = "cash";
-            btnCash.Enabled = false;
-            btnCredit.Visible = false;
-            btnCash.BackColor = System.Drawing.Color.LightCoral;
-            txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
+            if(checkBuyer() == true)
+            {
+                transactionMode = "cash";
+                btnCash.Enabled = false;
+                btnCredit.Visible = false;
+                //btnCash.BackColor = System.Drawing.Color.LightCoral;
+                txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
+            }
         }
         private void btnCredit_Click(object sender, EventArgs e)
         {
 
-            if (maxedCredit() == false)
+            if (checkBuyer() == true && maxedCredit() == false)
             {
                 transactionMode = "credit";
                 activateButtons(true);
                 btnCash.Visible = false;
                 btnCredit.Enabled = false;
                 btnPayCredit.Visible = true;
-                btnCredit.BackColor = System.Drawing.Color.LightCoral;
+                //btnCredit.BackColor = System.Drawing.Color.LightCoral;
             }
-            else if (maxedCredit() == true)
+            else if (checkBuyer() == true &&maxedCredit() == true)
             {
                 btnPayCredit.Visible = true;
                 MessageBox.Show("You almost reached your credit limit! \n Current Balance: " + loadedCredit + "\n Credit Limit: " + creditLimit + "\n Available for Purchase: " + (creditLimit - loadedCredit), "Insufficient Credit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -219,12 +220,10 @@ namespace Falcon_Vendo_2019
                     txtName.Text = loadedEmployeeName;
                     txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
                     txtName.ReadOnly = true;
-                    txt1.Text = "ORAYT";
-                }
+                                    }
                 else
                 {
                     txtName.Text = "";
-                    txt1.Text = "engk";
                 }
                 e.Handled = true;
             }
@@ -241,9 +240,7 @@ namespace Falcon_Vendo_2019
             txtName.ReadOnly = false;
             txtName.Text = "";
             txtName.Select();
-            btnCash.Enabled = false;
-            btnCredit.Enabled = false;
-            btnCancel.Enabled = false;
+
         }
 
         //
@@ -254,15 +251,15 @@ namespace Falcon_Vendo_2019
         {
             cancelAttempts = coinsInserted = 0;
             activateButtons(false);
-            btnCash.Enabled = true;
-            btnCredit.Enabled = true;
-            btnCancel.Enabled = true;
+            btnCash.Enabled = false;
+            btnCredit.Enabled = false;
+            btnCancel.Enabled = false;
             btnCash.Visible = true;
             btnCredit.Visible = true;
             btnPayCredit.Visible = false;
             btnPayCredit.Enabled = false;
-            btnCash.BackColor = System.Drawing.Color.White;
-            btnCredit.BackColor = System.Drawing.Color.White;
+            //btnCash.BackColor = System.Drawing.Color.White;
+            //btnCredit.BackColor = System.Drawing.Color.White;
             txtCurrentCredit.Text = "0.00";
             txtCoinsInserted.Text = Convert.ToString(coinsInserted);
             a1item = a2item = a3item = b1item = b2item = b3item = c1item = c2item = c3item = d1item = d2item = d3item = "+";
@@ -387,6 +384,29 @@ namespace Falcon_Vendo_2019
             lblProductD1.Location = new System.Drawing.Point((btnD1.Location.X + (btnD1.Size.Width) / 2) - lblProductD1.Size.Width / 2, btnD1.Location.Y + btnD1.Size.Height + 5);
             lblProductD2.Location = new System.Drawing.Point((btnD2.Location.X + (btnD2.Size.Width) / 2) - lblProductD2.Size.Width / 2, lblProductD1.Location.Y);
             lblProductD3.Location = new System.Drawing.Point((btnD3.Location.X + (btnD3.Size.Width) / 2) - lblProductD3.Size.Width / 2, lblProductD1.Location.Y);
+        }
+
+        private void btnCash_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btnCash.Enabled == true)
+            {
+                btnCash.BackColor = System.Drawing.Color.White;
+            }
+            else
+            {
+                btnCash.BackColor = System.Drawing.Color.DimGray;
+            }
+        }
+        private void btnCredit_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btnCash.Enabled == true)
+            {
+                btnCredit.BackColor = System.Drawing.Color.White;
+            }
+            else
+            {
+                btnCredit.BackColor = System.Drawing.Color.DimGray;
+            }
         }
     }
 }
