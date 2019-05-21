@@ -27,8 +27,8 @@ namespace Falcon_Vendo_2019
 
         string item12, item11, item10, item9, item8, item7, item6, item5, item4, item3, item2, item1;
         int price12, price11, price10, price9, price8, price7, price6, price5, price4, price3, price2, price1;
-        //Label[] labels;
-        //Button[] buttons;
+        Label[] labels;
+        Button[] buttons;
 
 
         //
@@ -147,20 +147,6 @@ namespace Falcon_Vendo_2019
         }
 
 
-        private void btnPayCredit_Click(object sender, EventArgs e)
-        {
-            loadedCredit = loadedCredit + coinsInserted;
-            coinsInserted = 0;
-            txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
-            lblCoinsInserted.Text = Convert.ToString(coinsInserted);
-            if (maxedCredit() == false)
-            {
-                activateButtons(true);
-            }
-            else activateButtons(false);
-        }
-
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
 
@@ -183,6 +169,101 @@ namespace Falcon_Vendo_2019
         }
 
 
+        private void button_EnabledChanged(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            if (btn.Enabled == true)
+            {
+                btn.BackColor = System.Drawing.Color.White;
+            }
+            else
+            {
+                btn.BackColor = System.Drawing.Color.DimGray;
+            }
+        }
+
+        private void txtCurrentCredit_TextChanged(object sender, EventArgs e)
+        {
+            if(txtCurrentCredit.Text == "" || txtCurrentCredit.Text == "0.00")
+            {
+                this.txtCurrentCredit.BackColor = System.Drawing.Color.MintCream;
+                this.txtName.BackColor = System.Drawing.Color.MintCream;
+            }
+            else
+            {
+                this.txtCurrentCredit.BackColor = System.Drawing.Color.PaleGreen;
+                this.txtName.BackColor = System.Drawing.Color.PaleGreen;
+            }
+        }
+
+        private void txtEmpID_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmpID.Text == "bye")
+            {
+                this.Close();
+            }
+        }
+
+        private void txtEmpID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (checkBuyer())
+                {
+                    txtName.Text = loadedEmployeeName;
+                    btnCash.Enabled = true;
+                    btnCredit.Enabled = true;
+                    btnCancel.Enabled = true;
+                    txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
+                    txtEmpID.SelectAll();
+                }
+                else
+                {
+                    initializeForm();
+                    txtEmpID.SelectAll();
+
+                }
+            }
+        }
+
+        private void txtName_Click(object sender, EventArgs e)
+        {
+            txtEmpID.SelectAll();
+        }
+
+        private void txtEmpID_Leave(object sender, EventArgs e)
+        {
+
+            txtEmpID.SelectAll();
+        }
+
+        private void lblCoinsInserted_TextChanged(object sender, EventArgs e)
+        {
+            if (coinsInserted > 0)
+            {
+                btnCancel.Text = "Pay Credit and Cancel";
+                txtEmpID.ReadOnly = true;
+            }
+            else
+            {
+                btnCancel.Text = "Cancel Transaction";
+                txtEmpID.ReadOnly = false;
+                txtEmpID.SelectAll();
+            }
+        }
+
+        private void enterEmployee(object sender, EventArgs e)
+        {
+            txtEmpID.Select();
+            txtEmpID.SelectAll();
+        }
+
+        private void enterEmployee(object sender, MouseEventArgs e)
+        {
+            txtEmpID.SelectAll();
+        }
+
+
 
         //
         //  Methods
@@ -201,23 +282,9 @@ namespace Falcon_Vendo_2019
             btnCash.Visible = true;
             btnCredit.Visible = true;
             lblCoinsInserted.Text = Convert.ToString(coinsInserted);
-            item1 = item2 = item3 = item4 = item5 = item6 = item8 = item12 = item11 = item10 = item9 = item7=  "+";
+            item1 = item2 = item3 = item4 = item5 = item6 = item8 = item12 = item11 = item10 = item9 = item7 = "+";
             price1 = price2 = price3 = price4 = price5 = price6 = price7 = price8 = price9 = price10 = price11 = price12 = 10;
-            /*
-            // Start product name Simulation
-            a1item = "Nescafe 3 in 1 Brown";
-            a2item = "Kopiko Black";
-            a3item = "Great Taste White";
-            b1item = "Marlboro Black";
-            b2item = "Marlboro Red";
-            b3item = "Marlboro Lights";
-            c1item = "Canton Chilimansi";
-            c2item = "Lucky Me Chicken";
-            c3item = "Lucky Me Beef";
-            d1item = "Red Horse";
-            d2item = "SanMig Light";
-            d3item = "Sizzling Sisig";
-            */
+
             btnItem1.Text = "A1 \n" + price1 + ".00"; btnItem2.Text = "A2 \n" + price2 + ".00"; btnItem3.Text = "A3 \n" + price3 + ".00";
             btnItem4.Text = "B1 \n" + price4 + ".00"; btnItem5.Text = "B2 \n" + price5 + ".00"; btnItem6.Text = "B3 \n" + price6 + ".00";
             btnItem7.Text = "C1 \n" + price7 + ".00"; btnItem8.Text = "C2 \n" + price8 + ".00"; btnItem9.Text = "C3 \n" + price9 + ".00";
@@ -293,7 +360,7 @@ namespace Falcon_Vendo_2019
             btnCredit.Location = new System.Drawing.Point((grpVendoUI.Size.Width * 2 / 3) - (btnCredit.Size.Width / 2) + (50), btnCash.Location.Y);
             lblCoinsInserted.Location = new System.Drawing.Point((grpVendoUI.Size.Width / 2) - (lblCoinsInserted.Size.Width / 2), btnCredit.Location.Y + btnCredit.Size.Height + 15);
             btnCancel.Location = new System.Drawing.Point(grpVendoUI.Size.Width / 2 - ((btnCancel.Size.Width) / 2), lblProduct10.Location.Y + lblProduct10.Size.Height + 15);
-            txtEmpID.Location = new System.Drawing.Point(ClientSize.Width/2, ClientSize.Height/2);
+            txtEmpID.Location = new System.Drawing.Point(ClientSize.Width / 2, ClientSize.Height / 2);
 
             btnItem4.Location = new System.Drawing.Point(btnItem1.Location.X, btnItem1.Location.Y + btnItem1.Size.Height + 30);
             btnItem5.Location = new System.Drawing.Point(btnItem2.Location.X, btnItem4.Location.Y);
@@ -322,105 +389,6 @@ namespace Falcon_Vendo_2019
             lblProduct10.Location = new System.Drawing.Point((btnItem10.Location.X + (btnItem10.Size.Width) / 2) - lblProduct10.Size.Width / 2, btnItem10.Location.Y + btnItem10.Size.Height + 5);
             lblProduct11.Location = new System.Drawing.Point((btnItem11.Location.X + (btnItem11.Size.Width) / 2) - lblProduct11.Size.Width / 2, lblProduct10.Location.Y);
             lblProduct12.Location = new System.Drawing.Point((btnItem12.Location.X + (btnItem12.Size.Width) / 2) - lblProduct12.Size.Width / 2, lblProduct10.Location.Y);
-        }
-
-        private void btnCash_EnabledChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void button_EnabledChanged(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            if (btn.Enabled == true)
-            {
-                btn.BackColor = System.Drawing.Color.White;
-            }
-            else
-            {
-                btn.BackColor = System.Drawing.Color.DimGray;
-            }
-        }
-
-        private void txtCurrentCredit_TextChanged(object sender, EventArgs e)
-        {
-            if(txtCurrentCredit.Text == "" || txtCurrentCredit.Text == "0.00")
-            {
-                this.txtCurrentCredit.BackColor = System.Drawing.Color.MintCream;
-                this.txtName.BackColor = System.Drawing.Color.MintCream;
-            }
-            else
-            {
-                this.txtCurrentCredit.BackColor = System.Drawing.Color.PaleGreen;
-                this.txtName.BackColor = System.Drawing.Color.PaleGreen;
-            }
-        }
-
-        private void txtEmpID_TextChanged(object sender, EventArgs e)
-        {
-            if (txtEmpID.Text == "bye")
-            {
-                this.Close();
-            }
-        }
-
-        private void txtEmpID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                if (checkBuyer())
-                {
-                    txtName.Text = loadedEmployeeName;
-                    btnCash.Enabled = true;
-                    btnCredit.Enabled = true;
-                    btnCancel.Enabled = true;
-                    txtCurrentCredit.Text = String.Format("{0:0,0.0}", loadedCredit);
-                    txtEmpID.SelectAll();
-                }
-                else
-                {
-                    initializeForm();
-                    txtEmpID.SelectAll();
-//                    txtName.Text = "";
-
-                }
-            }
-        }
-
-        private void txtName_Click(object sender, EventArgs e)
-        {
-            txtEmpID.SelectAll();
-        }
-
-        private void txtEmpID_Leave(object sender, EventArgs e)
-        {
-
-            txtEmpID.SelectAll();
-        }
-
-        private void lblCoinsInserted_TextChanged(object sender, EventArgs e)
-        {
-            if (coinsInserted > 0)
-            {
-                btnCancel.Text = "Pay Credit and Cancel";
-                txtEmpID.ReadOnly = true;
-            }
-            else
-            {
-                btnCancel.Text = "Cancel Transaction";
-                txtEmpID.ReadOnly = false;
-                txtEmpID.SelectAll();
-            }
-        }
-
-        private void enterEmployee(object sender, EventArgs e)
-        {
-            txtEmpID.Select();
-            txtEmpID.SelectAll();
-        }
-
-        private void enterEmployee(object sender, MouseEventArgs e)
-        {
-            txtEmpID.SelectAll();
         }
 
     }
