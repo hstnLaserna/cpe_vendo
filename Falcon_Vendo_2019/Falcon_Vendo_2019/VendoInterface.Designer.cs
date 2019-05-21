@@ -32,24 +32,21 @@
             this.btn5 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
             this.grpVendoUI = new System.Windows.Forms.GroupBox();
-            this.txtEmployeeID = new System.Windows.Forms.TextBox();
-            this.btnNew = new System.Windows.Forms.Button();
+            this.lblCoinsInserted = new System.Windows.Forms.Label();
             this.txtCurrentCredit = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnPayCredit = new System.Windows.Forms.Button();
-            this.txtCoinsInserted = new System.Windows.Forms.TextBox();
-            this.lblProductC3 = new System.Windows.Forms.Label();
-            this.lblProductD3 = new System.Windows.Forms.Label();
-            this.lblProductB3 = new System.Windows.Forms.Label();
-            this.lblProductA3 = new System.Windows.Forms.Label();
-            this.lblProductC2 = new System.Windows.Forms.Label();
-            this.lblProductD2 = new System.Windows.Forms.Label();
-            this.lblProductB2 = new System.Windows.Forms.Label();
-            this.lblProductA2 = new System.Windows.Forms.Label();
-            this.lblProductC1 = new System.Windows.Forms.Label();
-            this.lblProductD1 = new System.Windows.Forms.Label();
-            this.lblProductB1 = new System.Windows.Forms.Label();
-            this.lblProductA1 = new System.Windows.Forms.Label();
+            this.lblProduct9 = new System.Windows.Forms.Label();
+            this.lblProduct12 = new System.Windows.Forms.Label();
+            this.lblProduct6 = new System.Windows.Forms.Label();
+            this.lblProduct3 = new System.Windows.Forms.Label();
+            this.lblProduct8 = new System.Windows.Forms.Label();
+            this.lblProduct11 = new System.Windows.Forms.Label();
+            this.lblProduct5 = new System.Windows.Forms.Label();
+            this.lblProduct2 = new System.Windows.Forms.Label();
+            this.lblProduct7 = new System.Windows.Forms.Label();
+            this.lblProduct10 = new System.Windows.Forms.Label();
+            this.lblProduct4 = new System.Windows.Forms.Label();
+            this.lblProduct1 = new System.Windows.Forms.Label();
             this.btnItem9 = new System.Windows.Forms.Button();
             this.btnItem12 = new System.Windows.Forms.Button();
             this.btnItem6 = new System.Windows.Forms.Button();
@@ -66,7 +63,8 @@
             this.btnCash = new System.Windows.Forms.Button();
             this.btnItem1 = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
+            this.lblNameLabel = new System.Windows.Forms.Label();
+            this.txtEmpID = new System.Windows.Forms.TextBox();
             this.grpVendoUI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +75,7 @@
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(78, 60);
             this.btn1.TabIndex = 4;
+            this.btn1.TabStop = false;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btnCoin_Click);
@@ -88,6 +87,7 @@
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(78, 60);
             this.btn5.TabIndex = 5;
+            this.btn5.TabStop = false;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btnCoin_Click);
@@ -99,6 +99,7 @@
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(78, 60);
             this.btn10.TabIndex = 6;
+            this.btn10.TabStop = false;
             this.btn10.Text = "10";
             this.btn10.UseVisualStyleBackColor = true;
             this.btn10.Click += new System.EventHandler(this.btnCoin_Click);
@@ -107,24 +108,21 @@
             // 
             this.grpVendoUI.BackColor = System.Drawing.SystemColors.Control;
             this.grpVendoUI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.grpVendoUI.Controls.Add(this.txtEmployeeID);
-            this.grpVendoUI.Controls.Add(this.btnNew);
+            this.grpVendoUI.Controls.Add(this.lblCoinsInserted);
             this.grpVendoUI.Controls.Add(this.txtCurrentCredit);
             this.grpVendoUI.Controls.Add(this.btnCancel);
-            this.grpVendoUI.Controls.Add(this.btnPayCredit);
-            this.grpVendoUI.Controls.Add(this.txtCoinsInserted);
-            this.grpVendoUI.Controls.Add(this.lblProductC3);
-            this.grpVendoUI.Controls.Add(this.lblProductD3);
-            this.grpVendoUI.Controls.Add(this.lblProductB3);
-            this.grpVendoUI.Controls.Add(this.lblProductA3);
-            this.grpVendoUI.Controls.Add(this.lblProductC2);
-            this.grpVendoUI.Controls.Add(this.lblProductD2);
-            this.grpVendoUI.Controls.Add(this.lblProductB2);
-            this.grpVendoUI.Controls.Add(this.lblProductA2);
-            this.grpVendoUI.Controls.Add(this.lblProductC1);
-            this.grpVendoUI.Controls.Add(this.lblProductD1);
-            this.grpVendoUI.Controls.Add(this.lblProductB1);
-            this.grpVendoUI.Controls.Add(this.lblProductA1);
+            this.grpVendoUI.Controls.Add(this.lblProduct9);
+            this.grpVendoUI.Controls.Add(this.lblProduct12);
+            this.grpVendoUI.Controls.Add(this.lblProduct6);
+            this.grpVendoUI.Controls.Add(this.lblProduct3);
+            this.grpVendoUI.Controls.Add(this.lblProduct8);
+            this.grpVendoUI.Controls.Add(this.lblProduct11);
+            this.grpVendoUI.Controls.Add(this.lblProduct5);
+            this.grpVendoUI.Controls.Add(this.lblProduct2);
+            this.grpVendoUI.Controls.Add(this.lblProduct7);
+            this.grpVendoUI.Controls.Add(this.lblProduct10);
+            this.grpVendoUI.Controls.Add(this.lblProduct4);
+            this.grpVendoUI.Controls.Add(this.lblProduct1);
             this.grpVendoUI.Controls.Add(this.btnItem9);
             this.grpVendoUI.Controls.Add(this.btnItem12);
             this.grpVendoUI.Controls.Add(this.btnItem6);
@@ -141,38 +139,31 @@
             this.grpVendoUI.Controls.Add(this.btnCash);
             this.grpVendoUI.Controls.Add(this.btnItem1);
             this.grpVendoUI.Controls.Add(this.txtName);
-            this.grpVendoUI.Controls.Add(this.lblName);
+            this.grpVendoUI.Controls.Add(this.lblNameLabel);
             this.grpVendoUI.Location = new System.Drawing.Point(186, 21);
             this.grpVendoUI.Name = "grpVendoUI";
             this.grpVendoUI.Size = new System.Drawing.Size(994, 1069);
             this.grpVendoUI.TabIndex = 14;
             this.grpVendoUI.TabStop = false;
+            this.grpVendoUI.Enter += new System.EventHandler(this.enterEmployee);
             // 
-            // txtEmployeeID
+            // lblCoinsInserted
             // 
-            this.txtEmployeeID.BackColor = System.Drawing.Color.White;
-            this.txtEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeID.Location = new System.Drawing.Point(8, 300);
-            this.txtEmployeeID.Name = "txtEmployeeID";
-            this.txtEmployeeID.Size = new System.Drawing.Size(308, 45);
-            this.txtEmployeeID.TabIndex = 40;
-            this.txtEmployeeID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.White;
-            this.btnNew.Font = new System.Drawing.Font("University", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(949, 47);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(45, 45);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "+";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.lblCoinsInserted.BackColor = System.Drawing.Color.Black;
+            this.lblCoinsInserted.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCoinsInserted.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
+            this.lblCoinsInserted.ForeColor = System.Drawing.Color.Red;
+            this.lblCoinsInserted.Location = new System.Drawing.Point(440, 269);
+            this.lblCoinsInserted.Name = "lblCoinsInserted";
+            this.lblCoinsInserted.Size = new System.Drawing.Size(198, 98);
+            this.lblCoinsInserted.TabIndex = 40;
+            this.lblCoinsInserted.Text = "x";
+            this.lblCoinsInserted.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCoinsInserted.TextChanged += new System.EventHandler(this.lblCoinsInserted_TextChanged);
             // 
             // txtCurrentCredit
             // 
-            this.txtCurrentCredit.BackColor = System.Drawing.Color.White;
+            this.txtCurrentCredit.BackColor = System.Drawing.Color.PaleGreen;
             this.txtCurrentCredit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.txtCurrentCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtCurrentCredit.Location = new System.Drawing.Point(160, 97);
@@ -181,6 +172,7 @@
             this.txtCurrentCredit.TabIndex = 0;
             this.txtCurrentCredit.Text = "Credit amount";
             this.txtCurrentCredit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtCurrentCredit.TextChanged += new System.EventHandler(this.txtCurrentCredit_TextChanged);
             // 
             // btnCancel
             // 
@@ -190,168 +182,142 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(855, 75);
             this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabStop = false;
             this.btnCancel.Text = "Cancel Transaction";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnPayCredit
+            // lblProduct9
             // 
-            this.btnPayCredit.BackColor = System.Drawing.Color.White;
-            this.btnPayCredit.Enabled = false;
-            this.btnPayCredit.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayCredit.Location = new System.Drawing.Point(674, 273);
-            this.btnPayCredit.Name = "btnPayCredit";
-            this.btnPayCredit.Size = new System.Drawing.Size(280, 100);
-            this.btnPayCredit.TabIndex = 20;
-            this.btnPayCredit.Text = "Deduct to your Credit";
-            this.btnPayCredit.UseVisualStyleBackColor = false;
-            this.btnPayCredit.Visible = false;
-            this.btnPayCredit.Click += new System.EventHandler(this.btnPayCredit_Click);
+            this.lblProduct9.AutoSize = true;
+            this.lblProduct9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct9.Location = new System.Drawing.Point(786, 788);
+            this.lblProduct9.Name = "lblProduct9";
+            this.lblProduct9.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct9.TabIndex = 38;
+            this.lblProduct9.Text = "+";
+            this.lblProduct9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtCoinsInserted
+            // lblProduct12
             // 
-            this.txtCoinsInserted.BackColor = System.Drawing.Color.White;
-            this.txtCoinsInserted.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCoinsInserted.Location = new System.Drawing.Point(437, 274);
-            this.txtCoinsInserted.Name = "txtCoinsInserted";
-            this.txtCoinsInserted.ReadOnly = true;
-            this.txtCoinsInserted.Size = new System.Drawing.Size(198, 98);
-            this.txtCoinsInserted.TabIndex = 39;
-            this.txtCoinsInserted.Text = "x";
-            this.txtCoinsInserted.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCoinsInserted.TextChanged += new System.EventHandler(this.txtCoinsInserted_TextChanged);
+            this.lblProduct12.AutoSize = true;
+            this.lblProduct12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct12.Location = new System.Drawing.Point(786, 928);
+            this.lblProduct12.Name = "lblProduct12";
+            this.lblProduct12.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct12.TabIndex = 37;
+            this.lblProduct12.Text = "+";
+            this.lblProduct12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductC3
+            // lblProduct6
             // 
-            this.lblProductC3.AutoSize = true;
-            this.lblProductC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductC3.Location = new System.Drawing.Point(786, 788);
-            this.lblProductC3.Name = "lblProductC3";
-            this.lblProductC3.Size = new System.Drawing.Size(24, 25);
-            this.lblProductC3.TabIndex = 38;
-            this.lblProductC3.Text = "+";
-            this.lblProductC3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct6.AutoSize = true;
+            this.lblProduct6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct6.Location = new System.Drawing.Point(786, 643);
+            this.lblProduct6.Name = "lblProduct6";
+            this.lblProduct6.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct6.TabIndex = 36;
+            this.lblProduct6.Text = "+";
+            this.lblProduct6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductD3
+            // lblProduct3
             // 
-            this.lblProductD3.AutoSize = true;
-            this.lblProductD3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductD3.Location = new System.Drawing.Point(786, 928);
-            this.lblProductD3.Name = "lblProductD3";
-            this.lblProductD3.Size = new System.Drawing.Size(24, 25);
-            this.lblProductD3.TabIndex = 37;
-            this.lblProductD3.Text = "+";
-            this.lblProductD3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct3.AutoSize = true;
+            this.lblProduct3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct3.Location = new System.Drawing.Point(786, 499);
+            this.lblProduct3.Name = "lblProduct3";
+            this.lblProduct3.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct3.TabIndex = 35;
+            this.lblProduct3.Text = "+";
+            this.lblProduct3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductB3
+            // lblProduct8
             // 
-            this.lblProductB3.AutoSize = true;
-            this.lblProductB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductB3.Location = new System.Drawing.Point(786, 643);
-            this.lblProductB3.Name = "lblProductB3";
-            this.lblProductB3.Size = new System.Drawing.Size(24, 25);
-            this.lblProductB3.TabIndex = 36;
-            this.lblProductB3.Text = "+";
-            this.lblProductB3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct8.AutoSize = true;
+            this.lblProduct8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct8.Location = new System.Drawing.Point(549, 788);
+            this.lblProduct8.Name = "lblProduct8";
+            this.lblProduct8.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct8.TabIndex = 34;
+            this.lblProduct8.Text = "+";
+            this.lblProduct8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductA3
+            // lblProduct11
             // 
-            this.lblProductA3.AutoSize = true;
-            this.lblProductA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductA3.Location = new System.Drawing.Point(786, 499);
-            this.lblProductA3.Name = "lblProductA3";
-            this.lblProductA3.Size = new System.Drawing.Size(24, 25);
-            this.lblProductA3.TabIndex = 35;
-            this.lblProductA3.Text = "+";
-            this.lblProductA3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct11.AutoSize = true;
+            this.lblProduct11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct11.Location = new System.Drawing.Point(549, 928);
+            this.lblProduct11.Name = "lblProduct11";
+            this.lblProduct11.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct11.TabIndex = 33;
+            this.lblProduct11.Text = "+";
+            this.lblProduct11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductC2
+            // lblProduct5
             // 
-            this.lblProductC2.AutoSize = true;
-            this.lblProductC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductC2.Location = new System.Drawing.Point(549, 788);
-            this.lblProductC2.Name = "lblProductC2";
-            this.lblProductC2.Size = new System.Drawing.Size(24, 25);
-            this.lblProductC2.TabIndex = 34;
-            this.lblProductC2.Text = "+";
-            this.lblProductC2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct5.AutoSize = true;
+            this.lblProduct5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct5.Location = new System.Drawing.Point(549, 643);
+            this.lblProduct5.Name = "lblProduct5";
+            this.lblProduct5.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct5.TabIndex = 32;
+            this.lblProduct5.Text = "+";
+            this.lblProduct5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductD2
+            // lblProduct2
             // 
-            this.lblProductD2.AutoSize = true;
-            this.lblProductD2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductD2.Location = new System.Drawing.Point(549, 928);
-            this.lblProductD2.Name = "lblProductD2";
-            this.lblProductD2.Size = new System.Drawing.Size(24, 25);
-            this.lblProductD2.TabIndex = 33;
-            this.lblProductD2.Text = "+";
-            this.lblProductD2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct2.AutoSize = true;
+            this.lblProduct2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct2.Location = new System.Drawing.Point(549, 499);
+            this.lblProduct2.Name = "lblProduct2";
+            this.lblProduct2.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct2.TabIndex = 31;
+            this.lblProduct2.Text = "+";
+            this.lblProduct2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductB2
+            // lblProduct7
             // 
-            this.lblProductB2.AutoSize = true;
-            this.lblProductB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductB2.Location = new System.Drawing.Point(549, 643);
-            this.lblProductB2.Name = "lblProductB2";
-            this.lblProductB2.Size = new System.Drawing.Size(24, 25);
-            this.lblProductB2.TabIndex = 32;
-            this.lblProductB2.Text = "+";
-            this.lblProductB2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct7.AutoSize = true;
+            this.lblProduct7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct7.Location = new System.Drawing.Point(292, 788);
+            this.lblProduct7.Name = "lblProduct7";
+            this.lblProduct7.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct7.TabIndex = 30;
+            this.lblProduct7.Text = "+";
+            this.lblProduct7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductA2
+            // lblProduct10
             // 
-            this.lblProductA2.AutoSize = true;
-            this.lblProductA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductA2.Location = new System.Drawing.Point(549, 499);
-            this.lblProductA2.Name = "lblProductA2";
-            this.lblProductA2.Size = new System.Drawing.Size(24, 25);
-            this.lblProductA2.TabIndex = 31;
-            this.lblProductA2.Text = "+";
-            this.lblProductA2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct10.AutoSize = true;
+            this.lblProduct10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct10.Location = new System.Drawing.Point(292, 928);
+            this.lblProduct10.Name = "lblProduct10";
+            this.lblProduct10.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct10.TabIndex = 29;
+            this.lblProduct10.Text = "+";
+            this.lblProduct10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductC1
+            // lblProduct4
             // 
-            this.lblProductC1.AutoSize = true;
-            this.lblProductC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductC1.Location = new System.Drawing.Point(292, 788);
-            this.lblProductC1.Name = "lblProductC1";
-            this.lblProductC1.Size = new System.Drawing.Size(24, 25);
-            this.lblProductC1.TabIndex = 30;
-            this.lblProductC1.Text = "+";
-            this.lblProductC1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct4.AutoSize = true;
+            this.lblProduct4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct4.Location = new System.Drawing.Point(292, 643);
+            this.lblProduct4.Name = "lblProduct4";
+            this.lblProduct4.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct4.TabIndex = 28;
+            this.lblProduct4.Text = "+";
+            this.lblProduct4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblProductD1
+            // lblProduct1
             // 
-            this.lblProductD1.AutoSize = true;
-            this.lblProductD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductD1.Location = new System.Drawing.Point(292, 928);
-            this.lblProductD1.Name = "lblProductD1";
-            this.lblProductD1.Size = new System.Drawing.Size(24, 25);
-            this.lblProductD1.TabIndex = 29;
-            this.lblProductD1.Text = "+";
-            this.lblProductD1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblProductB1
-            // 
-            this.lblProductB1.AutoSize = true;
-            this.lblProductB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductB1.Location = new System.Drawing.Point(292, 643);
-            this.lblProductB1.Name = "lblProductB1";
-            this.lblProductB1.Size = new System.Drawing.Size(24, 25);
-            this.lblProductB1.TabIndex = 28;
-            this.lblProductB1.Text = "+";
-            this.lblProductB1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblProductA1
-            // 
-            this.lblProductA1.AutoSize = true;
-            this.lblProductA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductA1.Location = new System.Drawing.Point(292, 499);
-            this.lblProductA1.Name = "lblProductA1";
-            this.lblProductA1.Size = new System.Drawing.Size(24, 25);
-            this.lblProductA1.TabIndex = 27;
-            this.lblProductA1.Text = "+";
-            this.lblProductA1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct1.AutoSize = true;
+            this.lblProduct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct1.Location = new System.Drawing.Point(292, 499);
+            this.lblProduct1.Name = "lblProduct1";
+            this.lblProduct1.Size = new System.Drawing.Size(24, 25);
+            this.lblProduct1.TabIndex = 27;
+            this.lblProduct1.Text = "+";
+            this.lblProduct1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnItem9
             // 
@@ -360,6 +326,7 @@
             this.btnItem9.Name = "btnItem9";
             this.btnItem9.Size = new System.Drawing.Size(175, 100);
             this.btnItem9.TabIndex = 15;
+            this.btnItem9.TabStop = false;
             this.btnItem9.Text = "C3";
             this.btnItem9.UseVisualStyleBackColor = true;
             this.btnItem9.Click += new System.EventHandler(this.productClick);
@@ -371,6 +338,7 @@
             this.btnItem12.Name = "btnItem12";
             this.btnItem12.Size = new System.Drawing.Size(175, 100);
             this.btnItem12.TabIndex = 18;
+            this.btnItem12.TabStop = false;
             this.btnItem12.Text = "D3";
             this.btnItem12.UseVisualStyleBackColor = true;
             this.btnItem12.Click += new System.EventHandler(this.productClick);
@@ -382,6 +350,7 @@
             this.btnItem6.Name = "btnItem6";
             this.btnItem6.Size = new System.Drawing.Size(175, 100);
             this.btnItem6.TabIndex = 12;
+            this.btnItem6.TabStop = false;
             this.btnItem6.Text = "B3";
             this.btnItem6.UseVisualStyleBackColor = true;
             this.btnItem6.Click += new System.EventHandler(this.productClick);
@@ -393,6 +362,7 @@
             this.btnItem8.Name = "btnItem8";
             this.btnItem8.Size = new System.Drawing.Size(175, 100);
             this.btnItem8.TabIndex = 14;
+            this.btnItem8.TabStop = false;
             this.btnItem8.Text = "C2";
             this.btnItem8.UseVisualStyleBackColor = true;
             this.btnItem8.Click += new System.EventHandler(this.productClick);
@@ -404,6 +374,7 @@
             this.btnItem11.Name = "btnItem11";
             this.btnItem11.Size = new System.Drawing.Size(175, 100);
             this.btnItem11.TabIndex = 17;
+            this.btnItem11.TabStop = false;
             this.btnItem11.Text = "D2";
             this.btnItem11.UseVisualStyleBackColor = true;
             this.btnItem11.Click += new System.EventHandler(this.productClick);
@@ -415,6 +386,7 @@
             this.btnItem5.Name = "btnItem5";
             this.btnItem5.Size = new System.Drawing.Size(175, 100);
             this.btnItem5.TabIndex = 11;
+            this.btnItem5.TabStop = false;
             this.btnItem5.Text = "B2";
             this.btnItem5.UseVisualStyleBackColor = true;
             this.btnItem5.Click += new System.EventHandler(this.productClick);
@@ -426,6 +398,7 @@
             this.btnItem7.Name = "btnItem7";
             this.btnItem7.Size = new System.Drawing.Size(175, 100);
             this.btnItem7.TabIndex = 13;
+            this.btnItem7.TabStop = false;
             this.btnItem7.Text = "C1";
             this.btnItem7.UseVisualStyleBackColor = true;
             this.btnItem7.Click += new System.EventHandler(this.productClick);
@@ -437,6 +410,7 @@
             this.btnItem10.Name = "btnItem10";
             this.btnItem10.Size = new System.Drawing.Size(175, 100);
             this.btnItem10.TabIndex = 16;
+            this.btnItem10.TabStop = false;
             this.btnItem10.Text = "D1";
             this.btnItem10.UseVisualStyleBackColor = true;
             this.btnItem10.Click += new System.EventHandler(this.productClick);
@@ -448,6 +422,7 @@
             this.btnItem4.Name = "btnItem4";
             this.btnItem4.Size = new System.Drawing.Size(175, 100);
             this.btnItem4.TabIndex = 10;
+            this.btnItem4.TabStop = false;
             this.btnItem4.Text = "B1";
             this.btnItem4.UseVisualStyleBackColor = true;
             this.btnItem4.Click += new System.EventHandler(this.productClick);
@@ -469,6 +444,7 @@
             this.btnItem3.Name = "btnItem3";
             this.btnItem3.Size = new System.Drawing.Size(175, 100);
             this.btnItem3.TabIndex = 9;
+            this.btnItem3.TabStop = false;
             this.btnItem3.Text = "A3";
             this.btnItem3.UseVisualStyleBackColor = true;
             this.btnItem3.Click += new System.EventHandler(this.productClick);
@@ -480,6 +456,7 @@
             this.btnItem2.Name = "btnItem2";
             this.btnItem2.Size = new System.Drawing.Size(175, 100);
             this.btnItem2.TabIndex = 8;
+            this.btnItem2.TabStop = false;
             this.btnItem2.Text = "A2";
             this.btnItem2.UseVisualStyleBackColor = true;
             this.btnItem2.Click += new System.EventHandler(this.productClick);
@@ -492,6 +469,7 @@
             this.btnCredit.Name = "btnCredit";
             this.btnCredit.Size = new System.Drawing.Size(400, 100);
             this.btnCredit.TabIndex = 3;
+            this.btnCredit.TabStop = false;
             this.btnCredit.Text = "CREDIT";
             this.btnCredit.UseVisualStyleBackColor = false;
             this.btnCredit.EnabledChanged += new System.EventHandler(this.button_EnabledChanged);
@@ -505,6 +483,7 @@
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(400, 100);
             this.btnCash.TabIndex = 2;
+            this.btnCash.TabStop = false;
             this.btnCash.Text = "CASH";
             this.btnCash.UseVisualStyleBackColor = false;
             this.btnCash.EnabledChanged += new System.EventHandler(this.button_EnabledChanged);
@@ -517,6 +496,7 @@
             this.btnItem1.Name = "btnItem1";
             this.btnItem1.Size = new System.Drawing.Size(175, 100);
             this.btnItem1.TabIndex = 7;
+            this.btnItem1.TabStop = false;
             this.btnItem1.Text = "A1";
             this.btnItem1.UseVisualStyleBackColor = true;
             this.btnItem1.Click += new System.EventHandler(this.productClick);
@@ -524,33 +504,49 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(2, 47);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(952, 45);
-            this.txtName.TabIndex = 1;
+            this.txtName.Size = new System.Drawing.Size(986, 45);
+            this.txtName.TabIndex = 0;
             this.txtName.Text = "[Employee Name]";
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
-            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
+            this.txtName.Click += new System.EventHandler(this.txtName_Click);
             // 
-            // lblName
+            // lblNameLabel
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(3, 22);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(117, 22);
-            this.lblName.TabIndex = 3;
-            this.lblName.Text = "Hi! You are";
+            this.lblNameLabel.AutoSize = true;
+            this.lblNameLabel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameLabel.Location = new System.Drawing.Point(3, 22);
+            this.lblNameLabel.Name = "lblNameLabel";
+            this.lblNameLabel.Size = new System.Drawing.Size(117, 22);
+            this.lblNameLabel.TabIndex = 3;
+            this.lblNameLabel.Text = "Hi! You are";
+            // 
+            // txtEmpID
+            // 
+            this.txtEmpID.BackColor = System.Drawing.Color.Black;
+            this.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmpID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpID.ForeColor = System.Drawing.Color.White;
+            this.txtEmpID.Location = new System.Drawing.Point(12, 12);
+            this.txtEmpID.Name = "txtEmpID";
+            this.txtEmpID.Size = new System.Drawing.Size(168, 21);
+            this.txtEmpID.TabIndex = 1;
+            this.txtEmpID.Text = "[Employee Name]";
+            this.txtEmpID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmpID.TextChanged += new System.EventHandler(this.txtEmpID_TextChanged);
+            this.txtEmpID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpID_KeyPress);
+            this.txtEmpID.Leave += new System.EventHandler(this.txtEmpID_Leave);
             // 
             // VendoInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1084, 1055);
+            this.ClientSize = new System.Drawing.Size(1366, 1055);
+            this.Controls.Add(this.txtEmpID);
             this.Controls.Add(this.grpVendoUI);
             this.Controls.Add(this.btn10);
             this.Controls.Add(this.btn5);
@@ -568,10 +564,14 @@
             this.TransparencyKey = System.Drawing.Color.Lime;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.VendoInterface_Load);
+            this.Click += new System.EventHandler(this.enterEmployee);
+            this.Enter += new System.EventHandler(this.enterEmployee);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.enterEmployee);
             this.Resize += new System.EventHandler(this.VendoInterface_Resize);
             this.grpVendoUI.ResumeLayout(false);
             this.grpVendoUI.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -581,19 +581,18 @@
         private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Button btn10;
         private System.Windows.Forms.GroupBox grpVendoUI;
-        private System.Windows.Forms.TextBox txtCoinsInserted;
-        private System.Windows.Forms.Label lblProductC3;
-        private System.Windows.Forms.Label lblProductD3;
-        private System.Windows.Forms.Label lblProductB3;
-        private System.Windows.Forms.Label lblProductA3;
-        private System.Windows.Forms.Label lblProductC2;
-        private System.Windows.Forms.Label lblProductD2;
-        private System.Windows.Forms.Label lblProductB2;
-        private System.Windows.Forms.Label lblProductA2;
-        private System.Windows.Forms.Label lblProductC1;
-        private System.Windows.Forms.Label lblProductD1;
-        private System.Windows.Forms.Label lblProductB1;
-        private System.Windows.Forms.Label lblProductA1;
+        private System.Windows.Forms.Label lblProduct9;
+        private System.Windows.Forms.Label lblProduct12;
+        private System.Windows.Forms.Label lblProduct6;
+        private System.Windows.Forms.Label lblProduct3;
+        private System.Windows.Forms.Label lblProduct8;
+        private System.Windows.Forms.Label lblProduct11;
+        private System.Windows.Forms.Label lblProduct5;
+        private System.Windows.Forms.Label lblProduct2;
+        private System.Windows.Forms.Label lblProduct7;
+        private System.Windows.Forms.Label lblProduct10;
+        private System.Windows.Forms.Label lblProduct4;
+        private System.Windows.Forms.Label lblProduct1;
         private System.Windows.Forms.Button btnItem9;
         private System.Windows.Forms.Button btnItem12;
         private System.Windows.Forms.Button btnItem6;
@@ -610,12 +609,11 @@
         private System.Windows.Forms.Button btnCash;
         private System.Windows.Forms.Button btnItem1;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Button btnPayCredit;
+        private System.Windows.Forms.Label lblNameLabel;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label txtCurrentCredit;
-        private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.TextBox txtEmployeeID;
+        private System.Windows.Forms.TextBox txtEmpID;
+        private System.Windows.Forms.Label lblCoinsInserted;
     }
 }
 
