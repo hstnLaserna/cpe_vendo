@@ -32,6 +32,7 @@
             this.btn5 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
             this.grpVendoUI = new System.Windows.Forms.GroupBox();
+            this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.txtCurrentCredit = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -49,21 +50,21 @@
             this.lblProductD1 = new System.Windows.Forms.Label();
             this.lblProductB1 = new System.Windows.Forms.Label();
             this.lblProductA1 = new System.Windows.Forms.Label();
-            this.btnC3 = new System.Windows.Forms.Button();
-            this.btnD3 = new System.Windows.Forms.Button();
-            this.btnB3 = new System.Windows.Forms.Button();
-            this.btnC2 = new System.Windows.Forms.Button();
-            this.btnD2 = new System.Windows.Forms.Button();
-            this.btnB2 = new System.Windows.Forms.Button();
-            this.btnC1 = new System.Windows.Forms.Button();
-            this.btnD1 = new System.Windows.Forms.Button();
-            this.btnB1 = new System.Windows.Forms.Button();
+            this.btnItem9 = new System.Windows.Forms.Button();
+            this.btnItem12 = new System.Windows.Forms.Button();
+            this.btnItem6 = new System.Windows.Forms.Button();
+            this.btnItem8 = new System.Windows.Forms.Button();
+            this.btnItem11 = new System.Windows.Forms.Button();
+            this.btnItem5 = new System.Windows.Forms.Button();
+            this.btnItem7 = new System.Windows.Forms.Button();
+            this.btnItem10 = new System.Windows.Forms.Button();
+            this.btnItem4 = new System.Windows.Forms.Button();
             this.lblCreditAmount = new System.Windows.Forms.Label();
-            this.btnA3 = new System.Windows.Forms.Button();
-            this.btnA2 = new System.Windows.Forms.Button();
+            this.btnItem3 = new System.Windows.Forms.Button();
+            this.btnItem2 = new System.Windows.Forms.Button();
             this.btnCredit = new System.Windows.Forms.Button();
             this.btnCash = new System.Windows.Forms.Button();
-            this.btnA1 = new System.Windows.Forms.Button();
+            this.btnItem1 = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.grpVendoUI.SuspendLayout();
@@ -78,7 +79,7 @@
             this.btn1.TabIndex = 4;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            this.btn1.Click += new System.EventHandler(this.btnCoin_Click);
             // 
             // btn5
             // 
@@ -89,7 +90,7 @@
             this.btn5.TabIndex = 5;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.btn5_Click);
+            this.btn5.Click += new System.EventHandler(this.btnCoin_Click);
             // 
             // btn10
             // 
@@ -100,12 +101,13 @@
             this.btn10.TabIndex = 6;
             this.btn10.Text = "10";
             this.btn10.UseVisualStyleBackColor = true;
-            this.btn10.Click += new System.EventHandler(this.btn10_Click);
+            this.btn10.Click += new System.EventHandler(this.btnCoin_Click);
             // 
             // grpVendoUI
             // 
             this.grpVendoUI.BackColor = System.Drawing.SystemColors.Control;
             this.grpVendoUI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grpVendoUI.Controls.Add(this.txtEmployeeID);
             this.grpVendoUI.Controls.Add(this.btnNew);
             this.grpVendoUI.Controls.Add(this.txtCurrentCredit);
             this.grpVendoUI.Controls.Add(this.btnCancel);
@@ -123,21 +125,21 @@
             this.grpVendoUI.Controls.Add(this.lblProductD1);
             this.grpVendoUI.Controls.Add(this.lblProductB1);
             this.grpVendoUI.Controls.Add(this.lblProductA1);
-            this.grpVendoUI.Controls.Add(this.btnC3);
-            this.grpVendoUI.Controls.Add(this.btnD3);
-            this.grpVendoUI.Controls.Add(this.btnB3);
-            this.grpVendoUI.Controls.Add(this.btnC2);
-            this.grpVendoUI.Controls.Add(this.btnD2);
-            this.grpVendoUI.Controls.Add(this.btnB2);
-            this.grpVendoUI.Controls.Add(this.btnC1);
-            this.grpVendoUI.Controls.Add(this.btnD1);
-            this.grpVendoUI.Controls.Add(this.btnB1);
+            this.grpVendoUI.Controls.Add(this.btnItem9);
+            this.grpVendoUI.Controls.Add(this.btnItem12);
+            this.grpVendoUI.Controls.Add(this.btnItem6);
+            this.grpVendoUI.Controls.Add(this.btnItem8);
+            this.grpVendoUI.Controls.Add(this.btnItem11);
+            this.grpVendoUI.Controls.Add(this.btnItem5);
+            this.grpVendoUI.Controls.Add(this.btnItem7);
+            this.grpVendoUI.Controls.Add(this.btnItem10);
+            this.grpVendoUI.Controls.Add(this.btnItem4);
             this.grpVendoUI.Controls.Add(this.lblCreditAmount);
-            this.grpVendoUI.Controls.Add(this.btnA3);
-            this.grpVendoUI.Controls.Add(this.btnA2);
+            this.grpVendoUI.Controls.Add(this.btnItem3);
+            this.grpVendoUI.Controls.Add(this.btnItem2);
             this.grpVendoUI.Controls.Add(this.btnCredit);
             this.grpVendoUI.Controls.Add(this.btnCash);
-            this.grpVendoUI.Controls.Add(this.btnA1);
+            this.grpVendoUI.Controls.Add(this.btnItem1);
             this.grpVendoUI.Controls.Add(this.txtName);
             this.grpVendoUI.Controls.Add(this.lblName);
             this.grpVendoUI.Location = new System.Drawing.Point(186, 21);
@@ -145,6 +147,16 @@
             this.grpVendoUI.Size = new System.Drawing.Size(994, 1069);
             this.grpVendoUI.TabIndex = 14;
             this.grpVendoUI.TabStop = false;
+            // 
+            // txtEmployeeID
+            // 
+            this.txtEmployeeID.BackColor = System.Drawing.Color.White;
+            this.txtEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeID.Location = new System.Drawing.Point(8, 300);
+            this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.Size = new System.Drawing.Size(308, 45);
+            this.txtEmployeeID.TabIndex = 40;
+            this.txtEmployeeID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnNew
             // 
@@ -341,104 +353,104 @@
             this.lblProductA1.Text = "+";
             this.lblProductA1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnC3
+            // btnItem9
             // 
-            this.btnC3.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC3.Location = new System.Drawing.Point(718, 676);
-            this.btnC3.Name = "btnC3";
-            this.btnC3.Size = new System.Drawing.Size(175, 100);
-            this.btnC3.TabIndex = 15;
-            this.btnC3.Text = "C3";
-            this.btnC3.UseVisualStyleBackColor = true;
-            this.btnC3.Click += new System.EventHandler(this.productClick);
+            this.btnItem9.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem9.Location = new System.Drawing.Point(718, 676);
+            this.btnItem9.Name = "btnItem9";
+            this.btnItem9.Size = new System.Drawing.Size(175, 100);
+            this.btnItem9.TabIndex = 15;
+            this.btnItem9.Text = "C3";
+            this.btnItem9.UseVisualStyleBackColor = true;
+            this.btnItem9.Click += new System.EventHandler(this.productClick);
             // 
-            // btnD3
+            // btnItem12
             // 
-            this.btnD3.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD3.Location = new System.Drawing.Point(718, 825);
-            this.btnD3.Name = "btnD3";
-            this.btnD3.Size = new System.Drawing.Size(175, 100);
-            this.btnD3.TabIndex = 18;
-            this.btnD3.Text = "D3";
-            this.btnD3.UseVisualStyleBackColor = true;
-            this.btnD3.Click += new System.EventHandler(this.productClick);
+            this.btnItem12.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem12.Location = new System.Drawing.Point(718, 825);
+            this.btnItem12.Name = "btnItem12";
+            this.btnItem12.Size = new System.Drawing.Size(175, 100);
+            this.btnItem12.TabIndex = 18;
+            this.btnItem12.Text = "D3";
+            this.btnItem12.UseVisualStyleBackColor = true;
+            this.btnItem12.Click += new System.EventHandler(this.productClick);
             // 
-            // btnB3
+            // btnItem6
             // 
-            this.btnB3.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB3.Location = new System.Drawing.Point(718, 540);
-            this.btnB3.Name = "btnB3";
-            this.btnB3.Size = new System.Drawing.Size(175, 100);
-            this.btnB3.TabIndex = 12;
-            this.btnB3.Text = "B3";
-            this.btnB3.UseVisualStyleBackColor = true;
-            this.btnB3.Click += new System.EventHandler(this.productClick);
+            this.btnItem6.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem6.Location = new System.Drawing.Point(718, 540);
+            this.btnItem6.Name = "btnItem6";
+            this.btnItem6.Size = new System.Drawing.Size(175, 100);
+            this.btnItem6.TabIndex = 12;
+            this.btnItem6.Text = "B3";
+            this.btnItem6.UseVisualStyleBackColor = true;
+            this.btnItem6.Click += new System.EventHandler(this.productClick);
             // 
-            // btnC2
+            // btnItem8
             // 
-            this.btnC2.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC2.Location = new System.Drawing.Point(481, 676);
-            this.btnC2.Name = "btnC2";
-            this.btnC2.Size = new System.Drawing.Size(175, 100);
-            this.btnC2.TabIndex = 14;
-            this.btnC2.Text = "C2";
-            this.btnC2.UseVisualStyleBackColor = true;
-            this.btnC2.Click += new System.EventHandler(this.productClick);
+            this.btnItem8.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem8.Location = new System.Drawing.Point(481, 676);
+            this.btnItem8.Name = "btnItem8";
+            this.btnItem8.Size = new System.Drawing.Size(175, 100);
+            this.btnItem8.TabIndex = 14;
+            this.btnItem8.Text = "C2";
+            this.btnItem8.UseVisualStyleBackColor = true;
+            this.btnItem8.Click += new System.EventHandler(this.productClick);
             // 
-            // btnD2
+            // btnItem11
             // 
-            this.btnD2.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD2.Location = new System.Drawing.Point(481, 825);
-            this.btnD2.Name = "btnD2";
-            this.btnD2.Size = new System.Drawing.Size(175, 100);
-            this.btnD2.TabIndex = 17;
-            this.btnD2.Text = "D2";
-            this.btnD2.UseVisualStyleBackColor = true;
-            this.btnD2.Click += new System.EventHandler(this.productClick);
+            this.btnItem11.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem11.Location = new System.Drawing.Point(481, 825);
+            this.btnItem11.Name = "btnItem11";
+            this.btnItem11.Size = new System.Drawing.Size(175, 100);
+            this.btnItem11.TabIndex = 17;
+            this.btnItem11.Text = "D2";
+            this.btnItem11.UseVisualStyleBackColor = true;
+            this.btnItem11.Click += new System.EventHandler(this.productClick);
             // 
-            // btnB2
+            // btnItem5
             // 
-            this.btnB2.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB2.Location = new System.Drawing.Point(481, 540);
-            this.btnB2.Name = "btnB2";
-            this.btnB2.Size = new System.Drawing.Size(175, 100);
-            this.btnB2.TabIndex = 11;
-            this.btnB2.Text = "B2";
-            this.btnB2.UseVisualStyleBackColor = true;
-            this.btnB2.Click += new System.EventHandler(this.productClick);
+            this.btnItem5.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem5.Location = new System.Drawing.Point(481, 540);
+            this.btnItem5.Name = "btnItem5";
+            this.btnItem5.Size = new System.Drawing.Size(175, 100);
+            this.btnItem5.TabIndex = 11;
+            this.btnItem5.Text = "B2";
+            this.btnItem5.UseVisualStyleBackColor = true;
+            this.btnItem5.Click += new System.EventHandler(this.productClick);
             // 
-            // btnC1
+            // btnItem7
             // 
-            this.btnC1.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC1.Location = new System.Drawing.Point(225, 676);
-            this.btnC1.Name = "btnC1";
-            this.btnC1.Size = new System.Drawing.Size(175, 100);
-            this.btnC1.TabIndex = 13;
-            this.btnC1.Text = "C1";
-            this.btnC1.UseVisualStyleBackColor = true;
-            this.btnC1.Click += new System.EventHandler(this.productClick);
+            this.btnItem7.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem7.Location = new System.Drawing.Point(225, 676);
+            this.btnItem7.Name = "btnItem7";
+            this.btnItem7.Size = new System.Drawing.Size(175, 100);
+            this.btnItem7.TabIndex = 13;
+            this.btnItem7.Text = "C1";
+            this.btnItem7.UseVisualStyleBackColor = true;
+            this.btnItem7.Click += new System.EventHandler(this.productClick);
             // 
-            // btnD1
+            // btnItem10
             // 
-            this.btnD1.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD1.Location = new System.Drawing.Point(225, 825);
-            this.btnD1.Name = "btnD1";
-            this.btnD1.Size = new System.Drawing.Size(175, 100);
-            this.btnD1.TabIndex = 16;
-            this.btnD1.Text = "D1";
-            this.btnD1.UseVisualStyleBackColor = true;
-            this.btnD1.Click += new System.EventHandler(this.productClick);
+            this.btnItem10.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem10.Location = new System.Drawing.Point(225, 825);
+            this.btnItem10.Name = "btnItem10";
+            this.btnItem10.Size = new System.Drawing.Size(175, 100);
+            this.btnItem10.TabIndex = 16;
+            this.btnItem10.Text = "D1";
+            this.btnItem10.UseVisualStyleBackColor = true;
+            this.btnItem10.Click += new System.EventHandler(this.productClick);
             // 
-            // btnB1
+            // btnItem4
             // 
-            this.btnB1.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB1.Location = new System.Drawing.Point(225, 540);
-            this.btnB1.Name = "btnB1";
-            this.btnB1.Size = new System.Drawing.Size(175, 100);
-            this.btnB1.TabIndex = 10;
-            this.btnB1.Text = "B1";
-            this.btnB1.UseVisualStyleBackColor = true;
-            this.btnB1.Click += new System.EventHandler(this.productClick);
+            this.btnItem4.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem4.Location = new System.Drawing.Point(225, 540);
+            this.btnItem4.Name = "btnItem4";
+            this.btnItem4.Size = new System.Drawing.Size(175, 100);
+            this.btnItem4.TabIndex = 10;
+            this.btnItem4.Text = "B1";
+            this.btnItem4.UseVisualStyleBackColor = true;
+            this.btnItem4.Click += new System.EventHandler(this.productClick);
             // 
             // lblCreditAmount
             // 
@@ -450,27 +462,27 @@
             this.lblCreditAmount.TabIndex = 17;
             this.lblCreditAmount.Text = "Credit amount:";
             // 
-            // btnA3
+            // btnItem3
             // 
-            this.btnA3.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA3.Location = new System.Drawing.Point(718, 396);
-            this.btnA3.Name = "btnA3";
-            this.btnA3.Size = new System.Drawing.Size(175, 100);
-            this.btnA3.TabIndex = 9;
-            this.btnA3.Text = "A3";
-            this.btnA3.UseVisualStyleBackColor = true;
-            this.btnA3.Click += new System.EventHandler(this.productClick);
+            this.btnItem3.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem3.Location = new System.Drawing.Point(718, 396);
+            this.btnItem3.Name = "btnItem3";
+            this.btnItem3.Size = new System.Drawing.Size(175, 100);
+            this.btnItem3.TabIndex = 9;
+            this.btnItem3.Text = "A3";
+            this.btnItem3.UseVisualStyleBackColor = true;
+            this.btnItem3.Click += new System.EventHandler(this.productClick);
             // 
-            // btnA2
+            // btnItem2
             // 
-            this.btnA2.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA2.Location = new System.Drawing.Point(481, 396);
-            this.btnA2.Name = "btnA2";
-            this.btnA2.Size = new System.Drawing.Size(175, 100);
-            this.btnA2.TabIndex = 8;
-            this.btnA2.Text = "A2";
-            this.btnA2.UseVisualStyleBackColor = true;
-            this.btnA2.Click += new System.EventHandler(this.productClick);
+            this.btnItem2.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem2.Location = new System.Drawing.Point(481, 396);
+            this.btnItem2.Name = "btnItem2";
+            this.btnItem2.Size = new System.Drawing.Size(175, 100);
+            this.btnItem2.TabIndex = 8;
+            this.btnItem2.Text = "A2";
+            this.btnItem2.UseVisualStyleBackColor = true;
+            this.btnItem2.Click += new System.EventHandler(this.productClick);
             // 
             // btnCredit
             // 
@@ -482,7 +494,7 @@
             this.btnCredit.TabIndex = 3;
             this.btnCredit.Text = "CREDIT";
             this.btnCredit.UseVisualStyleBackColor = false;
-            this.btnCredit.EnabledChanged += new System.EventHandler(this.btnCredit_EnabledChanged);
+            this.btnCredit.EnabledChanged += new System.EventHandler(this.button_EnabledChanged);
             this.btnCredit.Click += new System.EventHandler(this.btnCredit_Click);
             // 
             // btnCash
@@ -495,19 +507,19 @@
             this.btnCash.TabIndex = 2;
             this.btnCash.Text = "CASH";
             this.btnCash.UseVisualStyleBackColor = false;
-            this.btnCash.EnabledChanged += new System.EventHandler(this.btnCash_EnabledChanged);
+            this.btnCash.EnabledChanged += new System.EventHandler(this.button_EnabledChanged);
             this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
-            // btnA1
+            // btnItem1
             // 
-            this.btnA1.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA1.Location = new System.Drawing.Point(225, 396);
-            this.btnA1.Name = "btnA1";
-            this.btnA1.Size = new System.Drawing.Size(175, 100);
-            this.btnA1.TabIndex = 7;
-            this.btnA1.Text = "A1";
-            this.btnA1.UseVisualStyleBackColor = true;
-            this.btnA1.Click += new System.EventHandler(this.productClick);
+            this.btnItem1.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem1.Location = new System.Drawing.Point(225, 396);
+            this.btnItem1.Name = "btnItem1";
+            this.btnItem1.Size = new System.Drawing.Size(175, 100);
+            this.btnItem1.TabIndex = 7;
+            this.btnItem1.Text = "A1";
+            this.btnItem1.UseVisualStyleBackColor = true;
+            this.btnItem1.Click += new System.EventHandler(this.productClick);
             // 
             // txtName
             // 
@@ -519,10 +531,9 @@
             this.txtName.TabIndex = 1;
             this.txtName.Text = "[Employee Name]";
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtName.Click += new System.EventHandler(this.txtName_Enter);
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // lblName
             // 
@@ -556,7 +567,7 @@
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Lime;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.VendoInterface_Load);
             this.Resize += new System.EventHandler(this.VendoInterface_Resize);
             this.grpVendoUI.ResumeLayout(false);
             this.grpVendoUI.PerformLayout();
@@ -583,27 +594,28 @@
         private System.Windows.Forms.Label lblProductD1;
         private System.Windows.Forms.Label lblProductB1;
         private System.Windows.Forms.Label lblProductA1;
-        private System.Windows.Forms.Button btnC3;
-        private System.Windows.Forms.Button btnD3;
-        private System.Windows.Forms.Button btnB3;
-        private System.Windows.Forms.Button btnC2;
-        private System.Windows.Forms.Button btnD2;
-        private System.Windows.Forms.Button btnB2;
-        private System.Windows.Forms.Button btnC1;
-        private System.Windows.Forms.Button btnD1;
-        private System.Windows.Forms.Button btnB1;
+        private System.Windows.Forms.Button btnItem9;
+        private System.Windows.Forms.Button btnItem12;
+        private System.Windows.Forms.Button btnItem6;
+        private System.Windows.Forms.Button btnItem8;
+        private System.Windows.Forms.Button btnItem11;
+        private System.Windows.Forms.Button btnItem5;
+        private System.Windows.Forms.Button btnItem7;
+        private System.Windows.Forms.Button btnItem10;
+        private System.Windows.Forms.Button btnItem4;
         private System.Windows.Forms.Label lblCreditAmount;
-        private System.Windows.Forms.Button btnA3;
-        private System.Windows.Forms.Button btnA2;
+        private System.Windows.Forms.Button btnItem3;
+        private System.Windows.Forms.Button btnItem2;
         private System.Windows.Forms.Button btnCredit;
         private System.Windows.Forms.Button btnCash;
-        private System.Windows.Forms.Button btnA1;
+        private System.Windows.Forms.Button btnItem1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnPayCredit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label txtCurrentCredit;
         private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.TextBox txtEmployeeID;
     }
 }
 
